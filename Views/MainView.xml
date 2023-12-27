@@ -1,0 +1,257 @@
+﻿<view icon="9168" title="InfiniteHelper" width="580" height="425">
+    <control progid="DecalControls.Notebook">
+        <page label="TRACKING  ">
+            <control progid="DecalControls.FixedLayout" clipped="">
+                <control progid="DecalControls.StaticText" left="10"  top="10"  width="125" height="20" text="Server" />
+                <control progid="DecalControls.StaticText" left="135" top="10"  width="125" height="20" text="LOREM IPSUM" name="lblServer" />
+
+                <control progid="DecalControls.StaticText" left="10"  top="30"  width="125" height="20" text="Name" />
+                <control progid="DecalControls.StaticText" left="135" top="30"  width="125" height="20" text="LOREM IPSUM" name="lblName" />
+
+                <control progid="DecalControls.StaticText" left="10"  top="50"  width="125" height="20" text="Login" />
+                <control progid="DecalControls.StaticText" left="135" top="50"  width="125" height="20" text="YYYY-MM-DD HH:MM:SS PM" name="lblLoggedInAt" />
+
+                <control progid="DecalControls.StaticText" left="10"  top="80"  width="125" height="20" text="Started" />
+                <control progid="DecalControls.StaticText" left="135" top="80"  width="125" height="20" text="YYYY-MM-DD HH:MM:SS PM" name="lblTrackingStartedAt" />
+
+                <control progid="DecalControls.StaticText" left="10"  top="100" width="125" height="20" text="Duration" />
+                <control progid="DecalControls.StaticText" left="135" top="100" width="125" height="20" text="99d 9h 99m" name="lblTrackingDuration" />
+
+                <control progid="DecalControls.StaticText" left="10"  top="130" width="125" height="20" text="XP Tracked" />
+                <control progid="DecalControls.StaticText" left="135" top="130" width="125" height="20" text="TODO" name="lblXPTracked" />
+
+                <control progid="DecalControls.StaticText" left="10"  top="150" width="125" height="20" text="XP To Level" />
+                <control progid="DecalControls.StaticText" left="135" top="150" width="125" height="20" text="999,999,999,999,999" name="lblXPToLevel" />
+
+                <control progid="DecalControls.StaticText" left="10"  top="170" width="125" height="20" text="XP / Hour" />
+                <control progid="DecalControls.StaticText" left="135" top="170" width="125" height="20" text="999,999,999,999,999" name="lblXPPerHour" />
+
+                <control progid="DecalControls.StaticText" left="10"  top="190" width="125" height="20" text="Level ETA" />
+                <control progid="DecalControls.StaticText" left="135" top="190" width="125" height="20" text="TODO" name="lblLevelETA" />
+
+                <control progid="DecalControls.StaticText" left="10"  top="220" width="125" height="20" text="Lum Tracked" />
+                <control progid="DecalControls.StaticText" left="135" top="220" width="125" height="20" text="TODO" name="lblLumTracked" />
+
+                <control progid="DecalControls.StaticText" left="10"  top="240" width="125" height="20" text="Lum / Hour" />
+                <control progid="DecalControls.StaticText" left="135" top="240" width="125" height="20" text="999,999,999,999,999" name="lblLumPerHour" />
+
+                <control progid="DecalControls.StaticText" left="300" top="10"  width="125" height="20" text="QB" />
+                <control progid="DecalControls.StaticText" left="435" top="10"  width="125" height="20" text="9,999" name="lblQB" />
+
+                <control progid="DecalControls.StaticText" left="300" top="30"  width="125" height="20" text="QB %" />
+                <control progid="DecalControls.StaticText" left="435" top="30"  width="125" height="20" text="9,999" name="lblQBPercent" />
+
+                <control progid="DecalControls.StaticText" left="300" top="60"  width="125" height="20" text="Bonus to XP" />
+                <control progid="DecalControls.StaticText" left="435" top="60"  width="125" height="20" text="9,999%" name="lblXPBonus" />
+
+                <control progid="DecalControls.StaticText" left="300" top="80"  width="125" height="20" text="Bonus to Lum" />
+                <control progid="DecalControls.StaticText" left="435" top="80"  width="125" height="20" text="9,999%" name="lblLumBonus" />
+
+                <control progid="DecalControls.PushButton" left="300" top="130" width="250" height="40" text="RESET TRACKING" name="btnResetTracking" />
+
+                <control progid="DecalControls.PushButton" left="300" top="190" width="250" height="40" text="DEBUG" name="btnDebug" />
+                
+                <control progid="DecalControls.PushButton" left="300" top="250" width="250" height="40" text="REFRESH ALL" name="btnRefresh" />
+
+                <control progid="DecalControls.PushButton" left="300" top="310" width="250" height="40" text="ABOUT / HELP" name="btnHelp" />
+            
+                <control progid="DecalControls.StaticText" left="10" top="360"  width="560" height="20" text="" textcolor="255" name="lblTrackingMessage" />
+            </control>
+        </page>
+        <page label="BANK  ">
+            <control progid="DecalControls.FixedLayout" clipped="">
+                <control progid="DecalControls.StaticText" left="10"  top="10"  width="125" height="20" text="Account" />
+                <control progid="DecalControls.StaticText" left="135" top="10"  width="125" height="20" text="999999999" name="lblBankAccount" />
+
+                <control progid="DecalControls.StaticText" left="10"  top="40"  width="125" height="20" text="Pyreals" />
+                <control progid="DecalControls.StaticText" left="135" top="40"  width="125" height="20" text="999,999,999,999,999" name="lblBankPyreals" />
+
+                <control progid="DecalControls.StaticText" left="10"  top="70"  width="125" height="20" text="Legendaries" />
+                <control progid="DecalControls.StaticText" left="135" top="70"  width="125" height="20" text="9,999,999,999" name="lblBankKeys" />
+
+                <control progid="DecalControls.StaticText" left="10"  top="100" width="125" height="20" text="Luminance" />
+                <control progid="DecalControls.StaticText" left="135" top="100" width="125" height="20" text="9,999,999,999" name="lblBankLum" />
+
+                <control progid="DecalControls.StaticText" left="10"  top="130" width="125" height="20" text="Reptentence" />
+                <control progid="DecalControls.StaticText" left="135" top="130" width="125" height="20" text="9,999,999,999" name="lblBankRC" />
+
+                <control progid="DecalControls.StaticText" left="10"  top="160" width="125" height="20" text="Wealth" />
+                <control progid="DecalControls.StaticText" left="135" top="160" width="125" height="20" text="9,999,999,999" name="lblBankWC" />
+
+                <control progid="DecalControls.StaticText" left="10"  top="190" width="125" height="20" text="Protection" />
+                <control progid="DecalControls.StaticText" left="135" top="190" width="125" height="20" text="9,999,999,999" name="lblBankPC" />
+
+                <control progid="DecalControls.StaticText" left="280" top="40"   width="65" height="20" text="Amount: " />
+                <control progid="DecalControls.Edit"       left="350" top="40"   width="145" height="18" text="0" name="txtBankAmount" />
+
+                <control progid="DecalControls.StaticText" left="280" top="70"   width="65" height="20" text="Type: " />
+                <control progid="DecalControls.Choice"       left="350" top="70"   width="145" height="18" text="0" name="ddlBankType" />
+                
+                <control progid="DecalControls.PushButton" left="280" top="100"  width="100" height="20" text="WITHDRAW" name="btnBankWithdraw" />
+                <control progid="DecalControls.PushButton" left="400" top="100"  width="100" height="20" text="DEPOSIT" name="btnBankDeposit" />
+
+                <control progid="DecalControls.StaticText" left="280" top="130"   width="65" height="20" text="Send To: " />
+                <control progid="DecalControls.Edit"       left="350" top="130"   width="145" height="18" text="0" name="txtBankTarget" />
+
+                <control progid="DecalControls.PushButton" left="280" top="160"   width="100" height="20" text="SEND" name="btnBankSend" />
+                
+                <control progid="DecalControls.PushButton" left="10" top="230" width="230" height="40" text="DEPOSIT ALL" name="btnBankDepositAll" />
+
+                <control progid="DecalControls.PushButton" left="10" top="290" width="230" height="40" text="REFRESH BANK" name="btnBankRefresh" />
+
+                <control progid="DecalControls.StaticText" left="10" top="360"  width="560" height="40" text="" textcolor="255" name="lblBankMessage" />
+            </control>
+        </page>
+        <page label="ATTRS  ">
+            <control progid="DecalControls.FixedLayout" clipped="">
+                <control progid="DecalControls.StaticText" left="100" top="10"  width="60"  height="20" text="Template" />
+                <control progid="DecalControls.StaticText" left="170" top="10"  width="40"  height="20" text="Innate" />
+                <control progid="DecalControls.StaticText" left="220" top="10"  width="40"  height="20" text="Base" />
+                <control progid="DecalControls.StaticText" left="270" top="10"  width="40"  height="20" text="Buffed" />
+                <control progid="DecalControls.StaticText" left="320" top="10"  width="80"  height="20" text="Raises" />
+                <control progid="DecalControls.StaticText" left="370" top="10"  width="140" height="20" text="Raise Cost" />
+
+                <control progid="DecalControls.StaticText" left="10"  top="40"  width="80"  height="20" text="Strength" />
+                <control progid="DecalControls.Edit"       left="100" top="40"  width="60"  height="18" text="" name="txtStrTemplate" />
+                <control progid="DecalControls.StaticText" left="170" top="40"  width="40"  height="20" text="99,999" name="lblStrInnate" />
+                <control progid="DecalControls.StaticText" left="220" top="40"  width="40"  height="20" text="99,999" name="lblStrBase" />
+                <control progid="DecalControls.StaticText" left="270" top="40"  width="40"  height="20" text="99,999" name="lblStrBuffed" />
+                <control progid="DecalControls.StaticText" left="320" top="40"  width="80"  height="20" text="999,999,999" name="lblStrRaises" />
+                <control progid="DecalControls.StaticText" left="370" top="40"  width="125" height="20" text="999,999,999,999,999" name="lblStrRaiseCost" />
+                <control progid="DecalControls.PushButton" left="535" top="40"  width="30"  height="20" text=" + " name="btnStrRaise" />
+
+                <control progid="DecalControls.StaticText" left="10"  top="70"  width="80"  height="20" text="Endurance" />
+                <control progid="DecalControls.Edit"       left="100" top="70"  width="60"  height="18" text="" name="txtEndTemplate" />
+                <control progid="DecalControls.StaticText" left="170" top="70"  width="40"  height="20" text="99,999" name="lblEndInnate" />
+                <control progid="DecalControls.StaticText" left="220" top="70"  width="40"  height="20" text="99,999" name="lblEndBase" />
+                <control progid="DecalControls.StaticText" left="270" top="70"  width="40"  height="20" text="99,999" name="lblEndBuffed" />
+                <control progid="DecalControls.StaticText" left="320" top="70"  width="80"  height="20" text="999,999,999" name="lblEndRaises" />
+                <control progid="DecalControls.StaticText" left="370" top="70"  width="125" height="20" text="999,999,999,999,999" name="lblEndRaiseCost" />
+                <control progid="DecalControls.PushButton" left="535" top="70"  width="30"  height="20" text=" + " name="btnEndRaise" />
+
+                <control progid="DecalControls.StaticText" left="10"  top="100"  width="80"  height="20" text="Coordination" />
+                <control progid="DecalControls.Edit"       left="100" top="100"  width="60"  height="18" text="" name="txtCoordTemplate" />
+                <control progid="DecalControls.StaticText" left="170" top="100"  width="40"  height="20" text="99,999" name="lblCoordInnate" />
+                <control progid="DecalControls.StaticText" left="220" top="100"  width="40"  height="20" text="99,999" name="lblCoordBase" />
+                <control progid="DecalControls.StaticText" left="270" top="100"  width="40"  height="20" text="99,999" name="lblCoordBuffed" />
+                <control progid="DecalControls.StaticText" left="320" top="100"  width="80"  height="20" text="999,999,999" name="lblCoordRaises" />
+                <control progid="DecalControls.StaticText" left="370" top="100"  width="125" height="20" text="999,999,999,999,999" name="lblCoordRaiseCost" />
+                <control progid="DecalControls.PushButton" left="535" top="100"  width="30"  height="20" text=" + " name="btnCoordRaise" />
+
+                <control progid="DecalControls.StaticText" left="10"  top="130"  width="80"  height="20" text="Quickness" />
+                <control progid="DecalControls.Edit"       left="100" top="130"  width="60"  height="18" text="" name="txtQuickTemplate" />
+                <control progid="DecalControls.StaticText" left="170" top="130"  width="40"  height="20" text="99,999" name="lblQuickInnate" />
+                <control progid="DecalControls.StaticText" left="220" top="130"  width="40"  height="20" text="99,999" name="lblQuickBase" />
+                <control progid="DecalControls.StaticText" left="270" top="130"  width="40"  height="20" text="99,999" name="lblQuickBuffed" />
+                <control progid="DecalControls.StaticText" left="320" top="130"  width="80"  height="20" text="999,999,999" name="lblQuickRaises" />
+                <control progid="DecalControls.StaticText" left="370" top="130"  width="125" height="20" text="999,999,999,999,999" name="lblQuickRaiseCost" />
+                <control progid="DecalControls.PushButton" left="535" top="130"  width="30"  height="20" text=" + " name="btnQuickRaise" />
+
+                <control progid="DecalControls.StaticText" left="10"  top="160" width="80"  height="20" text="Focus" />
+                <control progid="DecalControls.Edit"       left="100" top="160" width="60"  height="18" text="" name="txtFocusTemplate" />
+                <control progid="DecalControls.StaticText" left="170" top="160" width="40"  height="20" text="99,999" name="lblFocusInnate" />
+                <control progid="DecalControls.StaticText" left="220" top="160" width="40"  height="20" text="99,999" name="lblFocusBase" />
+                <control progid="DecalControls.StaticText" left="270" top="160" width="40"  height="20" text="99,999" name="lblFocusBuffed" />
+                <control progid="DecalControls.StaticText" left="320" top="160" width="80"  height="20" text="999,999,999" name="lblFocusRaises" />
+                <control progid="DecalControls.StaticText" left="370" top="160" width="125" height="20" text="999,999,999,999,999" name="lblFocusRaiseCost" />
+                <control progid="DecalControls.PushButton" left="535" top="160" width="30"  height="20" text=" + " name="btnFocusRaise" />
+
+                <control progid="DecalControls.StaticText" left="10"  top="190" width="80"  height="20" text="Self" />
+                <control progid="DecalControls.Edit"       left="100" top="190" width="60"  height="18" text="" name="txtSelfTemplate" />
+                <control progid="DecalControls.StaticText" left="170" top="190" width="40"  height="20" text="99,999" name="lblSelfInnate" />
+                <control progid="DecalControls.StaticText" left="220" top="190" width="40"  height="20" text="99,999" name="lblSelfBase" />
+                <control progid="DecalControls.StaticText" left="270" top="190" width="40"  height="20" text="99,999" name="lblSelfBuffed" />
+                <control progid="DecalControls.StaticText" left="320" top="190" width="80"  height="20" text="999,999,999" name="lblSelfRaises" />
+                <control progid="DecalControls.StaticText" left="370" top="190" width="125" height="20" text="999,999,999,999,999" name="lblSelfRaiseCost" />
+                <control progid="DecalControls.PushButton" left="535" top="190" width="30"  height="20" text=" + " name="btnSelfRaise" />
+
+                <control progid="DecalControls.StaticText" left="10" top="220" width="70"  height="20" text="Available XP " name="lblUnspentXpText" />
+                <control progid="DecalControls.StaticText" left="100" top="220" width="400"  height="20" text="99,999,999,999,999" name="lblUnspentXp" />
+                
+                <control progid="DecalControls.PushButton" left="10" top="250" width="250" height="40" text="SAVE TEMPLATE AND REFRESH" name="btnAttributesRefresh" />
+                
+                <control progid="DecalControls.StaticText" left="10"  top="360"  width="560" height="20" text="" textcolor="255" name="lblAttributesMessage" />
+            </control>
+        </page>
+        <page label="RETAIL AUGS  ">
+            <control progid="DecalControls.FixedLayout" clipped="">
+                <control progid="DecalControls.StaticText" left="10" top="10"  width="180" height="20" text="Might of the Seventh Mule" />
+                <control progid="DecalControls.StaticText" left="250" top="10"  width="125" height="20" text="999" name="lblMightAug" />
+
+                <control progid="DecalControls.StaticText" left="10" top="40"  width="180" height="20" text="Shadow of the Seventh Mule" />
+                <control progid="DecalControls.StaticText" left="250" top="40"  width="125" height="20" text="999" name="lblShadowAug" />
+
+                <control progid="DecalControls.StaticText" left="10" top="70"  width="180" height="20" text="Clutch of the Miser" />
+                <control progid="DecalControls.StaticText" left="250" top="70"  width="125" height="20" text="999" name="lblClutchAug" />
+
+                <control progid="DecalControls.StaticText" left="10" top="100" width="180" height="20" text="Enduring Enchantment" />
+                <control progid="DecalControls.StaticText" left="250" top="100" width="125" height="20" text="999" name="lblEnduringAug" />
+
+                <control progid="DecalControls.StaticText" left="10" top="130" width="180" height="20" text="Quick Learner" />
+                <control progid="DecalControls.StaticText" left="250" top="130" width="125" height="20" text="999" name="lblLearnerAug" />
+
+                <control progid="DecalControls.StaticText" left="10"  top="360"  width="560" height="20" text="" textcolor="255" name="lblRetailAugmentationsMessage" />
+            </control>
+        </page>
+        <page label="INFINITE AUGS  ">
+            <control progid="DecalControls.FixedLayout" clipped="">
+                <control progid="DecalControls.StaticText" left="250" top="10"  width="125" height="20" text="Value" />
+                <control progid="DecalControls.StaticText" left="320" top="10"  width="125" height="20" text="Lum Cost" />
+
+                <control progid="DecalControls.StaticText" left="10"  top="40"  width="125" height="20" text="Spell Components" />
+                <control progid="DecalControls.StaticText" left="250" top="40"  width="125" height="20" text="999" name="lblSpellCompAug" />
+                <control progid="DecalControls.StaticText" left="320" top="40"  width="125" height="20" text="999" name="lblSpellCompAugCost" />
+
+                <control progid="DecalControls.StaticText" left="10"  top="70"  width="125" height="20" text="Missile Consumption" />
+                <control progid="DecalControls.StaticText" left="250" top="70"  width="125" height="20" text="999" name="lblMissileAug" />
+                <control progid="DecalControls.StaticText" left="320" top="70"  width="125" height="20" text="999" name="lblMissileAugCost" />
+
+                <control progid="DecalControls.StaticText" left="10"  top="100"  width="125" height="20" text="Spell Duration" />
+                <control progid="DecalControls.StaticText" left="250" top="100"  width="125" height="20" text="999" name="lblSpellDurationAug" />
+                <control progid="DecalControls.StaticText" left="320" top="100"  width="125" height="20" text="999" name="lblSpellDurationAugCost" />
+
+                <control progid="DecalControls.StaticText" left="10"  top="130" width="125" height="20" text="Vitality" />
+                <control progid="DecalControls.StaticText" left="250" top="130" width="125" height="20" text="999" name="lblVitAug" />
+                <control progid="DecalControls.StaticText" left="320" top="130" width="125" height="20" text="999" name="lblVitAugCost" />
+
+                <control progid="DecalControls.StaticText" left="10"  top="160" width="125" height="20" text="Combat Pet Damage" />
+                <control progid="DecalControls.StaticText" left="250" top="160" width="125" height="20" text="999" name="lblPetAug" />
+                <control progid="DecalControls.StaticText" left="320" top="160" width="125" height="20" text="999" name="lblPetAugCost" />
+
+                <control progid="DecalControls.StaticText" left="10"  top="190" width="150" height="20" text="Critical Strike Chance" />
+                <control progid="DecalControls.StaticText" left="250" top="190" width="125" height="20" text="999%" name="lblCritStrikeAug" />
+                <control progid="DecalControls.StaticText" left="320" top="190" width="125" height="20" text="999" name="lblCritStrikeAugCost" />
+
+                <control progid="DecalControls.StaticText" left="10"  top="220" width="150" height="20" text="Critical Strike Damage" />
+                <control progid="DecalControls.StaticText" left="250" top="220" width="125" height="20" text="999" name="lblCritChanceAug" />
+                <control progid="DecalControls.StaticText" left="320" top="220" width="125" height="20" text="999" name="lblCritChanceAugCost" />
+
+                <control progid="DecalControls.StaticText" left="10"  top="250" width="125" height="20" text="Creature Buff Value" />
+                <control progid="DecalControls.StaticText" left="250" top="250" width="125" height="20" text="999" name="lblCreatureBuffAug" />
+                <control progid="DecalControls.StaticText" left="320" top="250" width="125" height="20" text="999" name="lblCreatureBuffAugCost" />
+
+                <control progid="DecalControls.StaticText" left="10" top="280" width="125"  height="20" text="Banked Luminance " name="lblBankedLumText" />
+                <control progid="DecalControls.StaticText" left="250" top="280" width="300"  height="20" text="99,999,999,999,999" name="lblBankedLum" />
+                
+                <control progid="DecalControls.PushButton" left="10" top="310" width="250" height="40" text="REFRESH INFINITE AUGS" name="btnInfiniteAugsRefresh" />
+
+                <control progid="DecalControls.StaticText" left="10"  top="360"  width="560" height="20" text="" textcolor="255" name="lblInfiniteAugmentationsMessage" />
+            </control>
+        </page>
+        <page label="TRAVEL  ">
+            <control progid="DecalControls.FixedLayout" clipped="">
+                <control progid="DecalControls.PushButton" left="10" top="10" width="250" height="40" text="MARKETPLACE" name="btnMarketplaceRecall" />
+
+                <control progid="DecalControls.PushButton" left="10" top="70" width="250" height="40" text="HOUSE" name="btnHouseRecall" />
+
+                <control progid="DecalControls.PushButton" left="10" top="130" width="250" height="40" text="ALLEGIANCE MANSION" name="btnAllegianceMansionRecall" />
+
+                <control progid="DecalControls.PushButton" left="10" top="190" width="250" height="40" text="ALLEGIANCE HOMETOWN" name="btnAllegianceHometownRecall" />
+
+                <control progid="DecalControls.PushButton" left="10" top="250" width="250" height="40" text="LIFESTONE" name="btnLifestoneRecall" />
+
+                <control progid="DecalControls.StaticText" left="10"  top="360"  width="560" height="20" text="" textcolor="255" name="lblTravelMessage" />
+            </control>
+        </page>
+    </control>
+</view>
