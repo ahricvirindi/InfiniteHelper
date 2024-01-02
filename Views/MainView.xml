@@ -218,14 +218,15 @@
                 <control progid="DecalControls.StaticText" left="250" top="160" width="125" height="20" text="999" name="lblPetAug" />
                 <control progid="DecalControls.StaticText" left="320" top="160" width="125" height="20" text="999" name="lblPetAugCost" />
 
-                <control progid="DecalControls.StaticText" left="10"  top="190" width="150" height="20" text="Critical Strike Chance" />
-                <control progid="DecalControls.StaticText" left="250" top="190" width="125" height="20" text="999%" name="lblCritStrikeAug" />
-                <control progid="DecalControls.StaticText" left="320" top="190" width="125" height="20" text="999" name="lblCritStrikeAugCost" />
+                <control progid="DecalControls.StaticText" left="10"  top="190" width="150" height="20" text="Critical Strike Damage" />
+                <control progid="DecalControls.StaticText" left="250" top="190" width="125" height="20" text="999%" name="lblCritDamageAug" />
+                <control progid="DecalControls.StaticText" left="320" top="190" width="125" height="20" text="999" name="lblCritDamageAugCost" />
 
-                <control progid="DecalControls.StaticText" left="10"  top="220" width="150" height="20" text="Critical Strike Damage" />
+                <control progid="DecalControls.StaticText" left="10"  top="220" width="150" height="20" text="Critical Strike Chance" />
                 <control progid="DecalControls.StaticText" left="250" top="220" width="125" height="20" text="999" name="lblCritChanceAug" />
                 <control progid="DecalControls.StaticText" left="320" top="220" width="125" height="20" text="999" name="lblCritChanceAugCost" />
 
+                
                 <control progid="DecalControls.StaticText" left="10"  top="250" width="125" height="20" text="Creature Buff Value" />
                 <control progid="DecalControls.StaticText" left="250" top="250" width="125" height="20" text="999" name="lblCreatureBuffAug" />
                 <control progid="DecalControls.StaticText" left="320" top="250" width="125" height="20" text="999" name="lblCreatureBuffAugCost" />

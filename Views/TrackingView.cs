@@ -85,6 +85,8 @@ namespace InfiniteHelper.Views
             btnRefresh.Hit += new EventHandler(btnRefresh_Hit);
             btnDebug.Hit += new EventHandler(btnDebug_Hit);
             btnHelp.Hit += new EventHandler(btnHelp_Hit);
+
+            btnHelp.Text += $" [v{GetAssemblyVersion()}]";
         }
 
         public void Shutdown()
@@ -181,11 +183,7 @@ namespace InfiniteHelper.Views
         {
             try
             {
-                System.Reflection.Assembly assembly = System.Reflection.Assembly.GetExecutingAssembly();
-                System.Diagnostics.FileVersionInfo fvi = System.Diagnostics.FileVersionInfo.GetVersionInfo(assembly.Location);
-                string version = fvi.FileVersion;
-
-                Globals.WriteToChat($"VERSION    : {version}.", ChatColors.GREEN);
+                Globals.WriteToChat($"VERSION    : v{GetAssemblyVersion()}.", ChatColors.GREEN);
                 Globals.WriteToChat($"CREATED BY : Ahric Virindi.", ChatColors.GREEN);
                 Globals.WriteToChat($"SUPPORT    : Discord username - ahric", ChatColors.GREEN);
                 Globals.WriteToChat($"REQUESTS   : Discord username - ahric", ChatColors.GREEN);
@@ -195,6 +193,20 @@ namespace InfiniteHelper.Views
             {
                 Globals.Log(ex);
             }
+        }
+
+        private string GetAssemblyVersion()
+        {
+            string ver = "Unknown";
+
+            try
+            {
+                System.Reflection.Assembly assembly = System.Reflection.Assembly.GetExecutingAssembly();
+                System.Diagnostics.FileVersionInfo fvi = System.Diagnostics.FileVersionInfo.GetVersionInfo(assembly.Location);
+                ver = fvi.FileVersion;
+            } catch { }
+
+            return ver;
         }
     }
 }

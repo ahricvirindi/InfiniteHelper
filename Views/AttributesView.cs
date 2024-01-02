@@ -191,9 +191,9 @@ namespace InfiniteHelper.Views
 
             if (GetHasNoTemplateValues())
             {
-                var unsetMessage = "Starting template not entered. Please modify your starting attributes for accuracy.";
-                Globals.WriteToChat(unsetMessage, ChatColors.RED);
-                lblAttributesMessage.Text = unsetMessage;
+                var msg = "Starting template not entered. Please modify your starting attributes for accuracy.";
+                Globals.WriteToChat(msg, ChatColors.RED);
+                lblAttributesMessage.Text = msg;
             }
 
         }
@@ -292,12 +292,12 @@ namespace InfiniteHelper.Views
 
         private void SanitizeAndSaveTemplate()
         {
-            Globals.Player.Attributes.Strength.Template = SanitizeNumericTextbox(txtStrTemplate);
-            Globals.Player.Attributes.Endurance.Template = SanitizeNumericTextbox(txtEndTemplate);
-            Globals.Player.Attributes.Coordination.Template = SanitizeNumericTextbox(txtCoordTemplate);
-            Globals.Player.Attributes.Quickness.Template = SanitizeNumericTextbox(txtQuickTemplate);
-            Globals.Player.Attributes.Focus.Template = SanitizeNumericTextbox(txtFocusTemplate);
-            Globals.Player.Attributes.Self.Template = SanitizeNumericTextbox(txtSelfTemplate);
+            Globals.Player.Attributes.Strength.Template = SanitizeNumericTextbox(txtStrTemplate, "strength");
+            Globals.Player.Attributes.Endurance.Template = SanitizeNumericTextbox(txtEndTemplate, "endurance");
+            Globals.Player.Attributes.Coordination.Template = SanitizeNumericTextbox(txtCoordTemplate, "coordination");
+            Globals.Player.Attributes.Quickness.Template = SanitizeNumericTextbox(txtQuickTemplate, "quickness");
+            Globals.Player.Attributes.Focus.Template = SanitizeNumericTextbox(txtFocusTemplate, "focus");
+            Globals.Player.Attributes.Self.Template = SanitizeNumericTextbox(txtSelfTemplate, "self");
 
             // make sure current template is updated from player state into options
             Globals.Options.CurrentPlayer.Template.Strength = Globals.Player.Attributes.Strength.Template;
@@ -310,13 +310,17 @@ namespace InfiniteHelper.Views
             Globals.SaveOptions();
         }
         
-        private int SanitizeNumericTextbox(ITextBox textBox, int defaultValue = 10)
+        private int SanitizeNumericTextbox(ITextBox textBox, string label, int defaultValue = 10)
         {
             if (string.IsNullOrEmpty(textBox.Text)) textBox.Text = $"{defaultValue}";
             if (!int.TryParse(textBox.Text, out int value))
             {
                 value = defaultValue;
                 textBox.Text = $"{defaultValue}";
+
+                var msg = $"{textBox.Text} is not a valid value for {label} template attribute.  Set to default value of {defaultValue}.";
+                Globals.WriteToChat(msg, ChatColors.RED);
+                lblAttributesMessage.Text = msg;
             }
 
             if (value < 10) value = 10;

@@ -85,6 +85,13 @@ namespace InfiniteHelper.Models
 
             var minuteETA = toLevel / perMinute;
 
+            // if longer than the literql max timespan value
+            // just say forever
+            if (minuteETA >= (TimeSpan.MaxValue.TotalMinutes - 1))
+            {
+                return "Forever";
+            }
+
             var timeSpan = TimeSpan.FromMinutes(minuteETA);
 
             eta = Globals.ToReadableString(timeSpan);

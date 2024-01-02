@@ -144,7 +144,10 @@ namespace InfiniteHelper.Views
 
                 if (string.IsNullOrEmpty(txtBankAmount.Text) || txtBankAmount.Text.Equals("0"))
                 {
-                    lblBankMessage.Text = "Please enter a valid amount to withdraw.";
+                    var msg = "Please enter a valid amount to withdraw.";
+                    Globals.WriteToChat(msg, ChatColors.RED);
+                    lblBankMessage.Text = msg;
+
                     return;
                 }
 
@@ -188,7 +191,10 @@ namespace InfiniteHelper.Views
 
                 if (string.IsNullOrEmpty(txtBankAmount.Text) || txtBankAmount.Text.Equals("0"))
                 {
-                    lblBankMessage.Text = "Please enter a valid amount to deposit.";
+                    var msg = "Please enter a valid amount to deposit.";
+                    Globals.WriteToChat(msg, ChatColors.RED);
+                    lblBankMessage.Text = msg;
+
                     return;
                 }
 
@@ -212,7 +218,10 @@ namespace InfiniteHelper.Views
                 lblBankMessage.Text = "";
                 if (string.IsNullOrEmpty(txtBankTarget.Text))
                 {
-                    lblBankMessage.Text = "Please enter a valid recipient to send to.";
+                    var msg = "Please enter a valid recipient to send to.";
+                    Globals.WriteToChat(msg, ChatColors.RED);
+                    lblBankMessage.Text = msg;
+
                     return;
                 }
 
@@ -220,7 +229,19 @@ namespace InfiniteHelper.Views
 
                 if (string.IsNullOrEmpty(txtBankAmount.Text) || txtBankAmount.Text.Equals("0"))
                 {
-                    lblBankMessage.Text = "Please enter a valid amount to send.";
+                    var msg = "Please enter a valid amount to send.";
+                    Globals.WriteToChat(msg, ChatColors.RED);
+                    lblBankMessage.Text = msg;
+
+                    return;
+                }
+
+                if ((new List<string>() { "protection", "repentence", "wealth" }).Contains( ddlBankType.Text[ddlBankType.Selected]))
+                {
+                    var msg = $"{ddlBankType.Text[ddlBankType.Selected]} cannot be sent to other players.";
+                    Globals.WriteToChat(msg, ChatColors.RED);
+                    lblBankMessage.Text = msg;
+
                     return;
                 }
 

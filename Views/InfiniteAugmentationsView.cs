@@ -14,7 +14,7 @@ namespace InfiniteHelper.Views
         private MyClasses.MetaViewWrappers.IStaticText lblSpellDurationAug;
         private MyClasses.MetaViewWrappers.IStaticText lblVitAug;
         private MyClasses.MetaViewWrappers.IStaticText lblPetAug;
-        private MyClasses.MetaViewWrappers.IStaticText lblCritStrikeAug;
+        private MyClasses.MetaViewWrappers.IStaticText lblCritDamageAug;
         private MyClasses.MetaViewWrappers.IStaticText lblCritChanceAug;
         private MyClasses.MetaViewWrappers.IStaticText lblCreatureBuffAug;
 
@@ -25,7 +25,7 @@ namespace InfiniteHelper.Views
         private MyClasses.MetaViewWrappers.IStaticText lblSpellDurationAugCost;
         private MyClasses.MetaViewWrappers.IStaticText lblVitAugCost;
         private MyClasses.MetaViewWrappers.IStaticText lblPetAugCost;
-        private MyClasses.MetaViewWrappers.IStaticText lblCritStrikeAugCost;
+        private MyClasses.MetaViewWrappers.IStaticText lblCritDamageAugCost;
         private MyClasses.MetaViewWrappers.IStaticText lblCritChanceAugCost;
         private MyClasses.MetaViewWrappers.IStaticText lblCreatureBuffAugCost;
 
@@ -38,13 +38,13 @@ namespace InfiniteHelper.Views
         {
             if (HasShutdown) return;
 
-            lblSpellCompAug.Text = $"{Globals.Player.Lum.AdvancedAugs.SpellComponents.Value:n0}";
-            lblMissileAug.Text = $"{Globals.Player.Lum.AdvancedAugs.MissileConsumption.Value:n0}";
-            lblSpellDurationAug.Text = $"{Globals.Player.Lum.AdvancedAugs.SpellDuration.Value:n0}";
+            lblSpellCompAug.Text = $"{Globals.Player.Lum.AdvancedAugs.SpellComponents.Value:n0}%";
+            lblMissileAug.Text = $"{Globals.Player.Lum.AdvancedAugs.MissileConsumption.Value:n0}%";
+            lblSpellDurationAug.Text = $"+{Globals.Player.Lum.AdvancedAugs.SpellDuration.Value:n0}%";
             lblVitAug.Text = $"{Globals.Player.Lum.AdvancedAugs.Vitality.Value:n0}";
-            lblPetAug.Text = $"{Globals.Player.Lum.AdvancedAugs.CombatPetDamage.Value:n0}";
-            lblCritStrikeAug.Text = $"{Globals.Player.Lum.AdvancedAugs.CriticalStrikeDamage.Value:n0}";
-            lblCritChanceAug.Text = $"{Globals.Player.Lum.AdvancedAugs.CriticalStrikeChance.Value:n0}%";
+            lblPetAug.Text = $"+{Globals.Player.Lum.AdvancedAugs.CombatPetDamage.Value:n0}%";
+            lblCritDamageAug.Text = $"D {(Globals.Player.Lum.AdvancedAugs.CriticalStrikeDamage.Value / 10.0):n1}%";
+            lblCritChanceAug.Text = $"C {(Globals.Player.Lum.AdvancedAugs.CriticalStrikeChance.Value / 10.0):n1}%";
             lblCreatureBuffAug.Text = $"{Globals.Player.Lum.AdvancedAugs.CreatureBuffValue.Value:n0}";
 
             lblSpellCompAugCost.Text = $"{Globals.Player.Lum.AdvancedAugs.SpellComponents.RaiseCost:n0}";
@@ -57,9 +57,9 @@ namespace InfiniteHelper.Views
             lblVitAugCost.TextColor = Globals.Player.Lum.AdvancedAugs.Vitality.RaiseCost < Globals.Player.Bank.Luminance ? System.Drawing.Color.Green : System.Drawing.Color.White;
             lblPetAugCost.Text = $"{Globals.Player.Lum.AdvancedAugs.CombatPetDamage.RaiseCost:n0}";
             lblPetAugCost.TextColor = Globals.Player.Lum.AdvancedAugs.CombatPetDamage.RaiseCost < Globals.Player.Bank.Luminance ? System.Drawing.Color.Green : System.Drawing.Color.White;
-            lblCritStrikeAugCost.Text = $"{Globals.Player.Lum.AdvancedAugs.CriticalStrikeDamage.RaiseCost:n0}";
-            lblCritStrikeAugCost.TextColor = Globals.Player.Lum.AdvancedAugs.CriticalStrikeDamage.RaiseCost < Globals.Player.Bank.Luminance ? System.Drawing.Color.Green : System.Drawing.Color.White;
-            lblCritChanceAugCost.Text = $"{Globals.Player.Lum.AdvancedAugs.CriticalStrikeChance.RaiseCost:n0}";
+            lblCritDamageAugCost.Text = $"D {Globals.Player.Lum.AdvancedAugs.CriticalStrikeDamage.RaiseCost:n0}";
+            lblCritDamageAugCost.TextColor = Globals.Player.Lum.AdvancedAugs.CriticalStrikeDamage.RaiseCost < Globals.Player.Bank.Luminance ? System.Drawing.Color.Green : System.Drawing.Color.White;
+            lblCritChanceAugCost.Text = $"C {Globals.Player.Lum.AdvancedAugs.CriticalStrikeChance.RaiseCost:n0}";
             lblCritChanceAugCost.TextColor = Globals.Player.Lum.AdvancedAugs.CriticalStrikeChance.RaiseCost < Globals.Player.Bank.Luminance ? System.Drawing.Color.Green : System.Drawing.Color.White;
             lblCreatureBuffAugCost.Text = $"{Globals.Player.Lum.AdvancedAugs.CreatureBuffValue.RaiseCost:n0}";
             lblCreatureBuffAugCost.TextColor = Globals.Player.Lum.AdvancedAugs.CreatureBuffValue.RaiseCost < Globals.Player.Bank.Luminance ? System.Drawing.Color.Green : System.Drawing.Color.White;
@@ -76,16 +76,15 @@ namespace InfiniteHelper.Views
             lblSpellDurationAug = (MyClasses.MetaViewWrappers.IStaticText)Globals.UI.GetViewControl("lblSpellDurationAug");
             lblVitAug = (MyClasses.MetaViewWrappers.IStaticText)Globals.UI.GetViewControl("lblVitAug");
             lblPetAug = (MyClasses.MetaViewWrappers.IStaticText)Globals.UI.GetViewControl("lblPetAug");
-            lblCritStrikeAug = (MyClasses.MetaViewWrappers.IStaticText)Globals.UI.GetViewControl("lblCritStrikeAug");
+            lblCritDamageAug = (MyClasses.MetaViewWrappers.IStaticText)Globals.UI.GetViewControl("lblCritDamageAug");
             lblCritChanceAug = (MyClasses.MetaViewWrappers.IStaticText)Globals.UI.GetViewControl("lblCritChanceAug");
             lblCreatureBuffAug = (MyClasses.MetaViewWrappers.IStaticText)Globals.UI.GetViewControl("lblCreatureBuffAug");
-
             lblSpellCompAugCost = (MyClasses.MetaViewWrappers.IStaticText)Globals.UI.GetViewControl("lblSpellCompAugCost");
             lblMissileAugCost = (MyClasses.MetaViewWrappers.IStaticText)Globals.UI.GetViewControl("lblMissileAugCost");
             lblSpellDurationAugCost = (MyClasses.MetaViewWrappers.IStaticText)Globals.UI.GetViewControl("lblSpellDurationAugCost");
             lblVitAugCost = (MyClasses.MetaViewWrappers.IStaticText)Globals.UI.GetViewControl("lblVitAugCost");
             lblPetAugCost = (MyClasses.MetaViewWrappers.IStaticText)Globals.UI.GetViewControl("lblPetAugCost");
-            lblCritStrikeAugCost = (MyClasses.MetaViewWrappers.IStaticText)Globals.UI.GetViewControl("lblCritStrikeAugCost");
+            lblCritDamageAugCost = (MyClasses.MetaViewWrappers.IStaticText)Globals.UI.GetViewControl("lblCritDamageAugCost");
             lblCritChanceAugCost = (MyClasses.MetaViewWrappers.IStaticText)Globals.UI.GetViewControl("lblCritChanceAugCost");
             lblCreatureBuffAugCost = (MyClasses.MetaViewWrappers.IStaticText)Globals.UI.GetViewControl("lblCreatureBuffAugCost");
 
@@ -108,7 +107,7 @@ namespace InfiniteHelper.Views
             lblSpellDurationAug = null;
             lblVitAug = null;
             lblPetAug = null;
-            lblCritStrikeAug = null;
+            lblCritDamageAug = null;
             lblCritChanceAug = null;
             lblCreatureBuffAug = null;
 
@@ -117,7 +116,7 @@ namespace InfiniteHelper.Views
             lblSpellDurationAugCost = null;
             lblVitAugCost = null;
             lblPetAugCost = null;
-            lblCritStrikeAugCost = null;
+            lblCritDamageAugCost = null;
             lblCritChanceAugCost = null;
             lblCreatureBuffAugCost = null;
 
