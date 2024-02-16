@@ -94,7 +94,7 @@ namespace InfiniteHelper.Models
 
             var timeSpan = TimeSpan.FromMinutes(minuteETA);
 
-            eta = Globals.ToReadableString(timeSpan);
+            eta = Globals.ToReadableDurationString(timeSpan);
 
             return eta;
         }

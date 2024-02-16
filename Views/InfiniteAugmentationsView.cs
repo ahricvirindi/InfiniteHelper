@@ -40,11 +40,11 @@ namespace InfiniteHelper.Views
 
             lblSpellCompAug.Text = $"{Globals.Player.Lum.AdvancedAugs.SpellComponents.Value:n0}%";
             lblMissileAug.Text = $"{Globals.Player.Lum.AdvancedAugs.MissileConsumption.Value:n0}%";
-            lblSpellDurationAug.Text = $"+{Globals.Player.Lum.AdvancedAugs.SpellDuration.Value:n0}%";
+            lblSpellDurationAug.Text = $"+{Globals.Player.Lum.AdvancedAugs.SpellDuration.Value:n0} (+{Globals.ToReadableDurationString((int)(90 * (1 + ((Globals.Player.Lum.AdvancedAugs.SpellDuration.Value ?? 0) * .2))))} w/ 8s)";
             lblVitAug.Text = $"{Globals.Player.Lum.AdvancedAugs.Vitality.Value:n0}";
-            lblPetAug.Text = $"+{Globals.Player.Lum.AdvancedAugs.CombatPetDamage.Value:n0}%";
-            lblCritDamageAug.Text = $"D {(Globals.Player.Lum.AdvancedAugs.CriticalStrikeDamage.Value / 10.0):n1}%";
-            lblCritChanceAug.Text = $"C {(Globals.Player.Lum.AdvancedAugs.CriticalStrikeChance.Value / 10.0):n1}%";
+            lblPetAug.Text = $"{Globals.Player.Lum.AdvancedAugs.CombatPetDamage.Value:n0} (+{((Globals.Player.Lum.AdvancedAugs.CombatPetDamage.Value ?? 0) * 10):n0}%)";
+            lblCritDamageAug.Text = $"{((Globals.Player.Lum.AdvancedAugs.CriticalStrikeDamage.Value ?? 0) / 10.0):n1}%";
+            lblCritChanceAug.Text = $"{((Globals.Player.Lum.AdvancedAugs.CriticalStrikeChance.Value ?? 0) / 10.0):n1}%";
             lblCreatureBuffAug.Text = $"{Globals.Player.Lum.AdvancedAugs.CreatureBuffValue.Value:n0}";
 
             lblSpellCompAugCost.Text = $"{Globals.Player.Lum.AdvancedAugs.SpellComponents.RaiseCost:n0}";
@@ -57,9 +57,9 @@ namespace InfiniteHelper.Views
             lblVitAugCost.TextColor = Globals.Player.Lum.AdvancedAugs.Vitality.RaiseCost < Globals.Player.Bank.Luminance ? System.Drawing.Color.Green : System.Drawing.Color.White;
             lblPetAugCost.Text = $"{Globals.Player.Lum.AdvancedAugs.CombatPetDamage.RaiseCost:n0}";
             lblPetAugCost.TextColor = Globals.Player.Lum.AdvancedAugs.CombatPetDamage.RaiseCost < Globals.Player.Bank.Luminance ? System.Drawing.Color.Green : System.Drawing.Color.White;
-            lblCritDamageAugCost.Text = $"D {Globals.Player.Lum.AdvancedAugs.CriticalStrikeDamage.RaiseCost:n0}";
+            lblCritDamageAugCost.Text = $"{Globals.Player.Lum.AdvancedAugs.CriticalStrikeDamage.RaiseCost:n0}";
             lblCritDamageAugCost.TextColor = Globals.Player.Lum.AdvancedAugs.CriticalStrikeDamage.RaiseCost < Globals.Player.Bank.Luminance ? System.Drawing.Color.Green : System.Drawing.Color.White;
-            lblCritChanceAugCost.Text = $"C {Globals.Player.Lum.AdvancedAugs.CriticalStrikeChance.RaiseCost:n0}";
+            lblCritChanceAugCost.Text = $"{Globals.Player.Lum.AdvancedAugs.CriticalStrikeChance.RaiseCost:n0}";
             lblCritChanceAugCost.TextColor = Globals.Player.Lum.AdvancedAugs.CriticalStrikeChance.RaiseCost < Globals.Player.Bank.Luminance ? System.Drawing.Color.Green : System.Drawing.Color.White;
             lblCreatureBuffAugCost.Text = $"{Globals.Player.Lum.AdvancedAugs.CreatureBuffValue.RaiseCost:n0}";
             lblCreatureBuffAugCost.TextColor = Globals.Player.Lum.AdvancedAugs.CreatureBuffValue.RaiseCost < Globals.Player.Bank.Luminance ? System.Drawing.Color.Green : System.Drawing.Color.White;

@@ -31,7 +31,7 @@ namespace InfiniteHelper.Global
         public static PluginHost Host { get; set; }
         public static DateTime StartedAt { get; set; } = DateTime.Now;
         public static DateTime TrackingStartedAt { get; set; } = DateTime.Now;
-        public static string TrackingSessionLength { get { return ToReadableString(DateTime.Now - TrackingStartedAt); } }
+        public static string TrackingSessionLength { get { return ToReadableDurationString(DateTime.Now - TrackingStartedAt); } }
         public static Player Player { get; set; } = new Player();
         public static MainView UI { get; set; } = new MainView();
         public static EventManager Events { get; set; } = new EventManager();
@@ -275,17 +275,35 @@ namespace InfiniteHelper.Global
             Host.Actions.InvokeChatParser(command);
         }
 
-        public static string ToReadableString(TimeSpan span)
+        public static string ToReadableDurationString(TimeSpan span)
         {
-            string formatted = string.Format("{0}{1}{2}{3}",
-                span.Duration().Days > 0 ? string.Format("{0:0}d{1} ", span.Days, span.Days == 1 ? string.Empty : "") : string.Empty,
-                span.Duration().Hours > 0 ? string.Format("{0:0}h{1} ", span.Hours, span.Hours == 1 ? string.Empty : "") : string.Empty,
-                span.Duration().Minutes > 0 ? string.Format("{0:0}m{1} ", span.Minutes, span.Minutes == 1 ? string.Empty : "") : string.Empty,
-                span.Duration().Seconds > 0 ? string.Format("{0:0}s{1}", span.Seconds, span.Seconds == 1 ? string.Empty : "") : string.Empty);
+            string formatted = "UNKNOWN";
 
-            if (string.IsNullOrEmpty(formatted)) formatted = "0s";
+            try
+            {
+                formatted = string.Format("{0}{1}{2}{3}",
+                    span.Duration().Days > 0 ? string.Format("{0:0}d{1} ", span.Days, span.Days == 1 ? string.Empty : "") : string.Empty,
+                    span.Duration().Hours > 0 ? string.Format("{0:0}h{1} ", span.Hours, span.Hours == 1 ? string.Empty : "") : string.Empty,
+                    span.Duration().Minutes > 0 ? string.Format("{0:0}m{1} ", span.Minutes, span.Minutes == 1 ? string.Empty : "") : string.Empty,
+                    span.Duration().Seconds > 0 ? string.Format("{0:0}s{1}", span.Seconds, span.Seconds == 1 ? string.Empty : "") : string.Empty);
+
+                if (string.IsNullOrEmpty(formatted)) formatted = "0s";
+            } catch(Exception e) { 
+                formatted = "ERR";
+            }
 
             return formatted;
+        }
+
+        public static string ToReadableDurationString(int minutes)
+        {
+            if (minutes > 0)
+            {
+                minutes *= -1;
+            }
+
+            var timeSpan = DateTime.Now - DateTime.Now.AddMinutes(minutes);
+            return ToReadableDurationString(timeSpan);
         }
     }
 }

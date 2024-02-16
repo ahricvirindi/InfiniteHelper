@@ -196,40 +196,39 @@
         <page label="INFINITE AUGS  ">
             <control progid="DecalControls.FixedLayout" clipped="">
                 <control progid="DecalControls.StaticText" left="250" top="10"  width="125" height="20" text="Value" />
-                <control progid="DecalControls.StaticText" left="320" top="10"  width="125" height="20" text="Lum Cost" />
+                <control progid="DecalControls.StaticText" left="400" top="10"  width="125" height="20" text="Lum Cost" />
 
                 <control progid="DecalControls.StaticText" left="10"  top="40"  width="125" height="20" text="Spell Components" />
                 <control progid="DecalControls.StaticText" left="250" top="40"  width="125" height="20" text="999" name="lblSpellCompAug" />
-                <control progid="DecalControls.StaticText" left="320" top="40"  width="125" height="20" text="999" name="lblSpellCompAugCost" />
+                <control progid="DecalControls.StaticText" left="400" top="40"  width="125" height="20" text="999" name="lblSpellCompAugCost" />
 
                 <control progid="DecalControls.StaticText" left="10"  top="70"  width="125" height="20" text="Missile Consumption" />
                 <control progid="DecalControls.StaticText" left="250" top="70"  width="125" height="20" text="999" name="lblMissileAug" />
-                <control progid="DecalControls.StaticText" left="320" top="70"  width="125" height="20" text="999" name="lblMissileAugCost" />
+                <control progid="DecalControls.StaticText" left="400" top="70"  width="125" height="20" text="999" name="lblMissileAugCost" />
 
                 <control progid="DecalControls.StaticText" left="10"  top="100"  width="125" height="20" text="Spell Duration" />
                 <control progid="DecalControls.StaticText" left="250" top="100"  width="125" height="20" text="999" name="lblSpellDurationAug" />
-                <control progid="DecalControls.StaticText" left="320" top="100"  width="125" height="20" text="999" name="lblSpellDurationAugCost" />
+                <control progid="DecalControls.StaticText" left="400" top="100"  width="125" height="20" text="999" name="lblSpellDurationAugCost" />
 
                 <control progid="DecalControls.StaticText" left="10"  top="130" width="125" height="20" text="Vitality" />
                 <control progid="DecalControls.StaticText" left="250" top="130" width="125" height="20" text="999" name="lblVitAug" />
-                <control progid="DecalControls.StaticText" left="320" top="130" width="125" height="20" text="999" name="lblVitAugCost" />
+                <control progid="DecalControls.StaticText" left="400" top="130" width="125" height="20" text="999" name="lblVitAugCost" />
 
                 <control progid="DecalControls.StaticText" left="10"  top="160" width="125" height="20" text="Combat Pet Damage" />
                 <control progid="DecalControls.StaticText" left="250" top="160" width="125" height="20" text="999" name="lblPetAug" />
-                <control progid="DecalControls.StaticText" left="320" top="160" width="125" height="20" text="999" name="lblPetAugCost" />
+                <control progid="DecalControls.StaticText" left="400" top="160" width="125" height="20" text="999" name="lblPetAugCost" />
 
                 <control progid="DecalControls.StaticText" left="10"  top="190" width="150" height="20" text="Critical Strike Damage" />
                 <control progid="DecalControls.StaticText" left="250" top="190" width="125" height="20" text="999%" name="lblCritDamageAug" />
-                <control progid="DecalControls.StaticText" left="320" top="190" width="125" height="20" text="999" name="lblCritDamageAugCost" />
+                <control progid="DecalControls.StaticText" left="400" top="190" width="125" height="20" text="999" name="lblCritDamageAugCost" />
 
                 <control progid="DecalControls.StaticText" left="10"  top="220" width="150" height="20" text="Critical Strike Chance" />
                 <control progid="DecalControls.StaticText" left="250" top="220" width="125" height="20" text="999" name="lblCritChanceAug" />
-                <control progid="DecalControls.StaticText" left="320" top="220" width="125" height="20" text="999" name="lblCritChanceAugCost" />
+                <control progid="DecalControls.StaticText" left="400" top="220" width="125" height="20" text="999" name="lblCritChanceAugCost" />
 
-                
                 <control progid="DecalControls.StaticText" left="10"  top="250" width="125" height="20" text="Creature Buff Value" />
                 <control progid="DecalControls.StaticText" left="250" top="250" width="125" height="20" text="999" name="lblCreatureBuffAug" />
-                <control progid="DecalControls.StaticText" left="320" top="250" width="125" height="20" text="999" name="lblCreatureBuffAugCost" />
+                <control progid="DecalControls.StaticText" left="400" top="250" width="125" height="20" text="999" name="lblCreatureBuffAugCost" />
 
                 <control progid="DecalControls.StaticText" left="10" top="280" width="125"  height="20" text="Banked Luminance " name="lblBankedLumText" />
                 <control progid="DecalControls.StaticText" left="250" top="280" width="300"  height="20" text="99,999,999,999,999" name="lblBankedLum" />
